@@ -19,6 +19,10 @@ class Router
        {
             $pc->about();
        }
+       else if(isset($get["route"]) && $get["route"] === "contact")
+       {
+           $pc->contact();
+       }
        else if(!isset($get["route"]))
        {
            $pc->home();
