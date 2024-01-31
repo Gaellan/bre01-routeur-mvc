@@ -13,17 +13,19 @@ class Router
 
     public function handleRequest(array $get) : void
     {
+        $pc = new PageController();
+
        if(isset($get["route"]) && $get["route"] === "a-propos")
        {
-
+            $pc->about();
        }
        else if(!isset($get["route"]))
        {
-
+           $pc->home();
        }
        else
        {
-
+           $pc->error404();
        }
     }
 }
